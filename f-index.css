@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f0f0;
+    background-image: url(img/fondo.jpg);
+    height: 10vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #000000;
+    color: #d6e0d9;
+    padding: 20px 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #ede8e8;
+}
+
+.menu-header {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.menu-header button {
+    border: none;
+    background: none;
+    outline: none;
+    width: 45px;
+    height: 45px;
+    color: #c7c0c0;
+    font-size: 22px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-header button:hover {
+    transform: scale(1.05);
+}
+
+.counter-favorite,
+.counter-cart {
+    font-size: 10px;
+    position: absolute;
+    background-color: rgb(40, 160, 190);
+    color: #0c0c0c;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 0;
+    gap: 30px;
+}
+
+
+/* **************aliniar texto de la imagen**************** */
+
+.card-product {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.content-card-product {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 1px;
+    padding: 1px 15px;
+}
+
+
+/* *************alinear imagen************* */
+
+.container-img {
+    height: 200px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.footer-card-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 24px;
+    color: #9e9494;
+}
+
+.container-buttons-card {
+    display: flex;
+    gap: 20px;
+}
+
+.container-buttons-card button {
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px #0d0d0d25;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+
+/* ********************************** */
+
+
+/*         LISTA DE FAVORITOS         */
+
+
+/* ********************************** */
+
+.container-list-favorites {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(400px);
+    background-color: #555;
+    opacity: 0;
+    width: 400px;
+    height: 100vh;
+    transition: all 0.5s linear;
+}
+
+.container-list-favorites.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.header-favorite {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-favorite i {
+    cursor: pointer;
+}
+
+.list-favorites {
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.list-favorites .card-favorite {
+    width: 100%;
+    background-color: #a09b9b;
+    box-shadow: 0px 0px 20px #00000065;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card-favorite .title {
+    color: #000;
+    flex: 1;
+}
+
+.card-favorite p:last-child {
+    font-weight: 700;
+    font-size: 22px;
+    color: #000;
+}
+
+
+/* ------------------- */
+
+#added-favorite {
+    color: red;
+    display: none;
+}
+
+#favorite-regular.active {
+    background-color: red;
+    display: none;
+}
+
+#added-favorite.active {
+    display: block;
+    color: red;
+}

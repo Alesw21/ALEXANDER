@@ -1,0 +1,15 @@
+responsivo como boton 
+
+<div class="buttons-user">
+                        <a href="https://open.spotify.com/intl-es/track/7xVb07V9Pp9yBrBErFdzB9?si=135f8a6d2d2c4a98" class="btn-register">
+                            <div class="card-concentracion">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="img/concentracion/instrumental study.jpg" alt="Instrumental study" />
+                                    </div>
+                                    <h2>Instrumental Study</h2>
+                                    <p>Focus with soft study music in the background.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
